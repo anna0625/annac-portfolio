@@ -1,0 +1,95 @@
+// VARIABLES
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 3rem;
+$header4: 2rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #28d39f, #28a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex($justify, $align, $direction){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+//  h2 {
+         // cannot be compile as variable 
+//      font-size: calc($header2 + 1vw)
+//  }
+
+@import 'global';
+@import 'intro';
+@import 'project';
+@import 'contact';
+@import 'footer';
+
+@media screen and (max-width: 1332px) {
+    html {
+        font-size: 53%;
+    }
+    // ========== HOME Page
+    .splash {
+        display: none;
+    }
+    svg {
+        width: 80%;
+    }
+    nav {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 754px){
+    html {
+        font-size: 43%;
+    }
+
+    // ========== HOME Page
+    svg {
+        height: 60%;
+    }
+    .main-head {
+        width: 100%;
+    }
+    nav {
+        .logo {
+            @include flex(center, center, column);
+            flex: 1 1 20rem;
+            margin-top: 2rem;
+        }
+        ul {
+            flex: 1 1 60rem;
+            margin: 2rem 0rem;
+        }
+    }
+    .intro-text {
+        margin: 5rem;
+        text-align: center;
+    }
+    .intro-img {
+        text-align: center;
+    }
+    .intro-social {
+        @include flex(center, center, row);
+        q {
+            margin: 2rem;
+        }
+    }
+
+    // ========== PROJECTS
+    .travelly, .elena-joy {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    // ========== CONTACT
+    form {
+        padding: 0rem;
+        width: 100%;
+    }
+}
