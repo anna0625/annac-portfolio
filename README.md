@@ -1,4 +1,4 @@
-# annac-travelly
+# annac-portfolio
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ef6f189f-74f9-4971-9672-f4045bda1d40/deploy-status)](https://app.netlify.com/sites/origin-portfolio/deploys)
 
